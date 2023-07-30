@@ -28,7 +28,7 @@ where
 
 <img src="./imgs/backtest.png" width="750">
 
-#### Risk Contribution
+### Portfolio Risk Contribution
 
 <img src="./imgs/risk_contribution.png" width="800">
 
