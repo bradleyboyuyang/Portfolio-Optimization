@@ -28,7 +28,18 @@ where
 
 <img src="./imgs/backtest.png" width="750">
 
+### Model Performance Summary
+
+<img src="./imgs/performance_summary.png" width="750">
+
+
+
+
+
 ### Portfolio Risk Contribution
 
 <img src="./imgs/risk_contribution.png" width="800">
 
+### Optimal Portfolio Weight
+
+<img src="./imgs/weights.png" width="750">
