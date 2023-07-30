@@ -1,7 +1,7 @@
 # Portfolio-Management
 In this project we build a backtesting framework for robust portfolio optimization models for multi-asset classes, including equities, fixed-income, real estate, and commodities. 
 
-### Model
+### Models
 
 Traditional mean-variance optimization (namely, Markowitz model) is known to have several drawbacks (e.g. sensitivity of parameters, ignorance of higher-order statistics, etc.). We optimize the model by introducing notional control, risk penalty, turnover penalty, and dynamic portfolio rebalancing. The target function is given by:
 
@@ -18,28 +18,48 @@ where
 - $\lambda$: risk penalty parameter (higher $\lambda$ means lower volatility)
 - $\gamma$: portfolio turnover penalty parameter (higher $\gamma$ means lower turnover)
 
+**Five optimized models**
 
+- **v1: standard Markowitz model**
+- **V1.5: Markowitz + Outlier Winsorization**
+- **V2: Markowitz + Winsorization + Notional Control**
+- **V3: Markowitz + Winsorization + Notional Control + Turnover Control**
+- **V4 (Final model): Markowitz + Winsorization + Notional Control + Turnover Control + Risk Control**
 
 ### Strategy Pipeline
 
 <img src="./imgs/framework.png" width="750">
 
-### Backtest Framework
-
 <img src="./imgs/backtest.png" width="750">
 
-### Model Performance Summary
+### Results
 
-<img src="./imgs/performance_summary.png" width="750">
+#### 1. Model Performance Summary
 
+| Models | Return | Volatility | Sharpe | Max Drawdown | Turnovers |
+| ------ | :----: | :--------: | :----: | :----------: | :-------: |
+| V1     | 0.0200 |   0.0714   | 0.2799 |   -0.1691    |  0.2518   |
+| V1.5   | 0.0163 |   0.0738   | 0.2216 |   -0.1778    |  0.3581   |
+| V2     | 0.0475 |   0.1183   | 0.4021 |   -0.2044    |  0.2468   |
+| V3     | 0.0479 |   0.1211   | 0.3957 |   -0.2110    |  0.1499   |
+| V4     | 0.0542 |   0.1411   | 0.3845 |   -0.2383    |  0.1828   |
 
-
-
-
-### Portfolio Risk Contribution
+#### 2. Portfolio Risk Contribution
 
 <img src="./imgs/risk_contribution.png" width="800">
 
-### Optimal Portfolio Weight
+#### 3. Optimal Portfolio Weight Dynamics
 
 <img src="./imgs/weights.png" width="750">
+
+#### 4. Robustness Check
+
+Check the model robustness for different asset classes, different hyper-parameter values (risk control and turnover control), different backtest windows.
+
+- Change of Sharpe and volatility w.r.t. risk penalty parameter
+
+<img src="./imgs/robust_risk.png" width="750">
+
+- Performance comparison for different backtest windows
+
+<img src="./imgs/robust_window.png" width="750">
