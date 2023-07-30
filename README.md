@@ -18,13 +18,13 @@ where
 - $\lambda$: risk penalty parameter (higher $\lambda$ means lower volatility)
 - $\gamma$: portfolio turnover penalty parameter (higher $\gamma$ means lower turnover)
 
-**Five optimized models**
+### **Five optimized models**
 
-- **v1: standard Markowitz model**
-- **V1.5: Markowitz + Outlier Winsorization**
-- **V2: Markowitz + Winsorization + Notional Control**
-- **V3: Markowitz + Winsorization + Notional Control + Turnover Control**
-- **V4 (Final model): Markowitz + Winsorization + Notional Control + Turnover Control + Risk Control**
+- v1: standard Markowitz model
+- V1.5: mean-variance + outlier winsorization
+- V2: mean-variance+ winsorization + Notional Control
+- V3: mean-variance+ winsorization + Notional Control + Turnover Control
+- V4 (Final model): mean-variance+ winsorization + Notional Control + Turnover Control + Risk Control
 
 ### Strategy Pipeline
 
@@ -34,25 +34,15 @@ where
 
 ### Results
 
-#### 1. Model Performance Summary
+#### 1. Optimal Portfolio Weight Dynamics
 
-| Models | Return | Volatility | Sharpe | Max Drawdown | Turnovers |
-| ------ | :----: | :--------: | :----: | :----------: | :-------: |
-| V1     | 0.0200 |   0.0714   | 0.2799 |   -0.1691    |  0.2518   |
-| V1.5   | 0.0163 |   0.0738   | 0.2216 |   -0.1778    |  0.3581   |
-| V2     | 0.0475 |   0.1183   | 0.4021 |   -0.2044    |  0.2468   |
-| V3     | 0.0479 |   0.1211   | 0.3957 |   -0.2110    |  0.1499   |
-| V4     | 0.0542 |   0.1411   | 0.3845 |   -0.2383    |  0.1828   |
+<img src="./imgs/weights.png" width="750">
 
 #### 2. Portfolio Risk Contribution
 
 <img src="./imgs/risk_contribution.png" width="800">
 
-#### 3. Optimal Portfolio Weight Dynamics
-
-<img src="./imgs/weights.png" width="750">
-
-#### 4. Robustness Check
+#### 3. Robustness Check
 
 Check the model robustness for different asset classes, different hyper-parameter values (risk control and turnover control), different backtest windows.
 
@@ -63,3 +53,18 @@ Check the model robustness for different asset classes, different hyper-paramete
 - Performance comparison for different backtest windows
 
 <img src="./imgs/robust_window.png" width="750">
+
+#### 4. Model Performance Summary
+
+| Models | Return | Volatility | Sharpe | Max Drawdown | Turnovers |
+| ------ | :----: | :--------: | :----: | :----------: | :-------: |
+| V1     | 0.0200 |   0.0714   | 0.2799 |   -0.1691    |  0.2518   |
+| V1.5   | 0.0163 |   0.0738   | 0.2216 |   -0.1778    |  0.3581   |
+| V2     | 0.0475 |   0.1183   | 0.4021 |   -0.2044    |  0.2468   |
+| V3     | 0.0479 |   0.1211   | 0.3957 |   -0.2110    |  0.1499   |
+| V4     | 0.0542 |   0.1411   | 0.3845 |   -0.2383    |  0.1828   |
+
+
+
+
+
