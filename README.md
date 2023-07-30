@@ -28,15 +28,15 @@ where
 
 ### Strategy Pipeline
 
-<img src="./imgs/framework.png" width="750">
+<img src="./imgs/framework.png" width="700">
 
-<img src="./imgs/backtest.png" width="750">
+<img src="./imgs/backtest.png" width="700">
 
 ### Results
 
 #### 1. Optimal Portfolio Weight Dynamics
 
-<img src="./imgs/weights.png" width="750">
+<img src="./imgs/weights.png" width="700">
 
 #### 2. Portfolio Risk Contribution
 
@@ -48,11 +48,11 @@ Check the model robustness for different asset classes, different hyper-paramete
 
 - Change of Sharpe and volatility w.r.t. risk penalty parameter
 
-<img src="./imgs/robust_risk.png" width="750">
+<img src="./imgs/robust_risk.png" width="650">
 
 - Performance comparison for different backtest windows
 
-<img src="./imgs/robust_window.png" width="750">
+<img src="./imgs/robust_window.png" width="650">
 
 #### 4. Model Performance Summary
 
