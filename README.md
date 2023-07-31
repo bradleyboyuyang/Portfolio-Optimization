@@ -15,7 +15,7 @@ Daily prices of four asset classes from 1990-2023 of equities (US equity, EM equ
 
 ## Backtest
 
-#### Portfolio Risk Contribution
+#### Risk Contribution
 
 <img src="./imgs/risk_contribution.png" width="800">
 
@@ -39,8 +39,6 @@ Check the model robustness for different asset classes, different hyper-paramete
 
 $$\text{argmax}_w(\mu^{T}w-\cfrac{1}{2}\lambda w^T\Sigma w- \gamma \left|| w - \hat{w} \right||^2)$$
 
-where
-
 - $\sum_i w_i = 1, w_i>0$ are portfolio weights, $\hat{w}$ is the previous weight
 
 - $\mu$: mean asset returns
@@ -58,9 +56,9 @@ where
 | V3     | 0.0479 |   0.1211   | 0.3957 |   -0.2110    |  0.1499   |
 | V4     | 0.0542 |   0.1411   | 0.3845 |   -0.2383    |  0.1828   |
 
-- v1: standard Markowitz model
-- V1.5: mean-variance + outlier winsorization
-- V2: mean-variance+ winsorization + Notional Control
-- V3: mean-variance+ winsorization + Notional Control + Turnover Control
-- V4 (Final model): mean-variance+ winsorization + Notional Control + Turnover Control + Risk Control
+- v1: Markowitz model
+- V1.5: mean-variance + winsorization
+- V2: mean-variance+ winsorization + notional control 
+- V3: mean-variance+ winsorization + notional control + turnover control 
+- V4 (Final model): mean-variance+ winsorization + notional control + turnover control + risk control
 
