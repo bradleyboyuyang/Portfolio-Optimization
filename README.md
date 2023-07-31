@@ -1,9 +1,9 @@
 # Portfolio-Management
-In this project we build a backtesting framework for robust portfolio optimization models for multi-asset classes, including equities, fixed-income, real estate, and commodities. 
+In this project we build a dynamic portfolio management backtesting framework for multi-asset classes (such as equity, bond, real estate, commodity).
 
 ### Target
 
-Construct a dynamically rebalanced robust portfolio with multi-asset classes.
+Construct a dynamically rebalanced portfolio with multi-asset classes.
 
 ### Data
 
