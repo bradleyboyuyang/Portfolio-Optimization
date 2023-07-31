@@ -7,12 +7,7 @@ Construct a dynamically rebalanced robust portfolio with multi-asset classes.
 
 ### Data
 
-Daily prices of four asset classes from 1990-2023:
-
-- Equities: US equity, EM equity, Asia equity, Europe equity
-- Fixed-income: high yield bond, aggregate bond
-- Real estate: US real estate
-- Commodity: gold
+Daily prices of four asset classes from 1990-2023 of equities (US equity, EM equity, Asia equity, Europe equity), fixed-income (high yield bond, aggregate bond), real estate (US real estate) and commodity (gold).
 
 ### Strategy Pipeline
 
@@ -55,12 +50,6 @@ where
 
 #### Performance Summary
 
-- v1: standard Markowitz model
-- V1.5: mean-variance + outlier winsorization
-- V2: mean-variance+ winsorization + Notional Control
-- V3: mean-variance+ winsorization + Notional Control + Turnover Control
-- V4 (Final model): mean-variance+ winsorization + Notional Control + Turnover Control + Risk Control
-
 | Models | Return | Volatility | Sharpe | Max Drawdown | Turnovers |
 | ------ | :----: | :--------: | :----: | :----------: | :-------: |
 | V1     | 0.0200 |   0.0714   | 0.2799 |   -0.1691    |  0.2518   |
@@ -69,5 +58,9 @@ where
 | V3     | 0.0479 |   0.1211   | 0.3957 |   -0.2110    |  0.1499   |
 | V4     | 0.0542 |   0.1411   | 0.3845 |   -0.2383    |  0.1828   |
 
-
+- v1: standard Markowitz model
+- V1.5: mean-variance + outlier winsorization
+- V2: mean-variance+ winsorization + Notional Control
+- V3: mean-variance+ winsorization + Notional Control + Turnover Control
+- V4 (Final model): mean-variance+ winsorization + Notional Control + Turnover Control + Risk Control
 
