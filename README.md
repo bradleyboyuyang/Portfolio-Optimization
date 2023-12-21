@@ -1,9 +1,8 @@
 # Portfolio-Management
-In this project we build a dynamic portfolio management backtesting framework for multi-asset classes (such as equity, bond, real estate, commodity).
+This is a beginner project from AQR Capital Management - build a dynamic portfolio optimization framework for multi-asset classes including equity, bond, real estate, and commodity.
 
 ### Target
-
-Construct a dynamically rebalanced portfolio with multi-asset classes. Traditional Markowitz model suffers from sensitivity w.r.t. model parameters. Fine-tune the model by adding sparse portfolio selection with mandate constraints.
+Traditional Markowitz model suffers from over-sensitivity regarding model parameters. The aim is to construct a dynamically rebalanced portfolio and fine-tune the model by adding sparse portfolio selection with mandate constraints.
 
 ### Data
 
