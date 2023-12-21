@@ -3,7 +3,7 @@ In this project we build a dynamic portfolio management backtesting framework fo
 
 ### Target
 
-Construct a dynamically rebalanced portfolio with multi-asset classes. Traditional Markowitz model suffers from sensitivity w.r.t. model parameters, we fine-tune the model by adding sparse portfolio selection with mandate constraints.
+Construct a dynamically rebalanced portfolio with multi-asset classes. Traditional Markowitz model suffers from sensitivity w.r.t. model parameters. Fine-tune the model by adding sparse portfolio selection with mandate constraints.
 
 ### Data
 
