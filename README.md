@@ -3,7 +3,7 @@ In this project we build a dynamic portfolio management backtesting framework fo
 
 ### Target
 
-Construct a dynamically rebalanced portfolio with multi-asset classes.
+Construct a dynamically rebalanced portfolio with multi-asset classes. Traditional Markowitz model suffers from sensitivity w.r.t. model parameters, we fine-tune the model by adding sparse portfolio selection with mandate constraints.
 
 ### Data
 
@@ -14,26 +14,6 @@ Daily prices of four asset classes from 1990-2023 of equities (US equity, EM equ
 <img src="./imgs/framework.png" width="750">
 
 ## Backtest
-
-#### Risk Contribution
-
-<img src="./imgs/risk_contribution.png" width="800">
-
-#### Optimal Portfolio Weights
-
-<img src="./imgs/weights.png" width="750">
-
-#### Robustness Check
-
-Check the model robustness for different asset classes, different hyper-parameter values (risk control and turnover control), different backtest windows.
-
-- Change of Sharpe and volatility with different risk penalty parameter $\lambda$
-
-<img src="./imgs/robust_risk.png" width="650">
-
-- Performance comparison for different backtest windows
-
-<img src="./imgs/robust_window.png" width="650">
 
 ### Models
 
@@ -58,7 +38,29 @@ $$\text{argmax}_w(\mu^{T}w-\cfrac{1}{2}\lambda w^T\Sigma w- \gamma \left|| w - \
 
 - v1: Markowitz model
 - V1.5: mean-variance + winsorization
-- V2: mean-variance+ winsorization + notional control 
-- V3: mean-variance+ winsorization + notional control + turnover control 
+- V2: mean-variance + winsorization + notional control 
+- V3: mean-variance + winsorization + notional control + turnover control 
 - V4 (Final model): mean-variance+ winsorization + notional control + turnover control + risk control
+
+#### Risk Contribution
+
+<img src="./imgs/risk_contribution.png" width="800">
+
+#### Optimal Portfolio Weights
+
+<img src="./imgs/weights.png" width="750">
+
+#### Robustness Check
+
+Check the model robustness for different asset classes, different hyper-parameter values (risk control and turnover control), different backtest windows.
+
+- Change of Sharpe and volatility with different risk penalty parameter $\lambda$
+
+<img src="./imgs/robust_risk.png" width="650">
+
+- Performance comparison for different backtest windows
+
+<img src="./imgs/robust_window.png" width="650">
+
+
 
